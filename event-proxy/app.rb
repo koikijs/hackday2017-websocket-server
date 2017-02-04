@@ -5,7 +5,7 @@ require 'json'
 
 post '/event', provides: :json do
   requestBody = JSON.parse request.body.read
-  ws = WebSocket::Client::Simple.connect 'http://192.168.1.117:8888'
+  ws = WebSocket::Client::Simple.connect 'http://websocket-server:8888'
   
   ws.on :message do |msg|
     puts msg.data

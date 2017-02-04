@@ -1,8 +1,16 @@
 version: '2'
 services:
-  web:
-    build: .
+  event-proxy:
+    build: event-proxy
     ports:
-      - "4567:4567"
-    volumes:
-      - .:/usr/src/app
+      - "4568:4567"
+    #volumes:
+    #  - "./event-proxy/:/usr/src/app"
+    links:
+      - "websocket-server"
+  websocket-server:
+    build: websocket-server
+    ports:
+      - "8889:8888"
+    #volumes:
+    #  - "./websocket-server/:/usr/src/app"

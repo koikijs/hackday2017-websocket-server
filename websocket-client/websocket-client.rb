@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'websocket-client-simple'
 
-ws = WebSocket::Client::Simple.connect 'http://localhost:8888'
+ws = WebSocket::Client::Simple.connect 'http://104.198.84.60:8888'
 
 ws.on :message do |msg|
   puts msg.data
