@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var con = new WebSocket('ws://10.20.52.198:8888');
+    var con = new WebSocket('ws://192.168.1.117:8888');
     con.onopen = function() {
     };
 
