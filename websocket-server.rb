@@ -1,8 +1,6 @@
 require 'em-websocket'
 require 'pp'
 
-puts 333
-
 connnections = []
 
 EM::WebSocket.start({:host => "0.0.0.0", :port => 8888}) do |ws_conn|
